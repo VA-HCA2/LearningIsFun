@@ -8,7 +8,8 @@
         "EndDate": "10/05/19",
         "Meets": "W, Th 6:00 PM to 9:00 PM; Sat 9:00 AM to 5:00 PM",
         "Fee": "1200.00",
-        "Students": []
+        "Students": [
+        ]
     },
     {
         "CourseId": "19FTPACTR",
@@ -52,7 +53,20 @@
         "EndDate": "12/10/19",
         "Meets": "Tu from 6:00 PM to 9:00 PM",
         "Fee": "183.00",
-        "Students": []
+        "Students": [
+            {
+                "StudentName": "Paulina Arce",
+                "Email": "alejarce12@hotmail.com"
+            },
+            {
+                "StudentName": "Maria Jose Arce",
+                "Email": "mariajose@yahoo.com"
+            },
+            {
+                "StudentName": "Samantha Proaño",
+                "Email": "samyproarce@gmail.com"
+            }
+        ]
     },
     {
         "CourseId": "SF19FC214",
@@ -96,7 +110,12 @@
         "EndDate": "12/10/19",
         "Meets": "Tu from 9:00 AM to 10:30 AM",
         "Fee": "10.00",
-        "Students": []
+        "Students": [
+            {
+                "StudentName": "bjh",
+                "Email": "xz"
+            }
+        ]
     },
     {
         "CourseId": "19FA74",
@@ -184,7 +203,16 @@
         "EndDate": "12/09/19",
         "Meets": "M from 11:00 AM to 12:30 PM; no class 11/25",
         "Fee": "65.00",
-        "Students": []
+        "Students": [
+            {
+                "StudentName": "Shantal Robles",
+                "Email": "shantall@yahoo.com"
+            },
+            {
+                "StudentName": "Daniela Robles",
+                "Email": "dany@yahoo.com"
+            }
+        ]
     },
     {
         "CourseId": "SF19FC217",
