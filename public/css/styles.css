@@ -12,3 +12,8 @@ h1{
   background-color: white
 }
 
+.headerImage {
+  background-image: url("../images/logo.jpg");
+  background-size: cover;
+  height: 400px;
+}
