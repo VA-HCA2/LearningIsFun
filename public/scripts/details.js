@@ -20,7 +20,13 @@ $(function() {
           "<tr><td> Meets:</td><td>"+objs.Meets + "</td></tr>"+ // Fifth Row
           "<tr><td> Fee:</td><td>" +objs.Fee +"</td></tr>"; // Fifth Row
 
-        $("#detailsTable").append(details);
-        //End of body table
+        $("#detailsTable").append(details); 
   }); // end of get JSON
+
+  $("#registerButton").attr("href","register.html?CourseId="+CourseId )
+
+  $("#registerButton").on("click", function() {
+ 
+    document.location.href="register.html?CourseId="+CourseId 
+  })
 }); // end of ready fuction

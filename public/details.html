@@ -1,58 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Learning is Fun</title>
-  </head>
+</head>
 
-  <body>
-     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="index.html">Learning is Fun</a>
-      <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-link text-white" href="courses.html">Courses</a>
-      <a class="nav-link text-white" href="register.html">Register</a>
-          </nav>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="index.html">Learning is Fun</a>
+        <a class="nav-link text-white" href="index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-white" href="courses.html">Courses</a>
+        <a class="nav-link text-white" href="register.html">Register</a>
+    </nav>
     <main>
         <div class="container">
-          
-                <div class="jumbotron p-4 p-md-5 text-black page">
-                    <div class="col-md-10 px-0">
-                        <h1 class="display-4 font-italic  headers">Details</h1>
-                        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
-                            efficiently about what’s most interesting in this post’s contents.</p>
+
+            <div class="jumbotron p-4 p-md-5 text-black page">
+                <div class="col-md-10 px-0">
+                    <h1 class="display-4 font-italic  headers"> Course details</h1>
+                    <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
+                        efficiently about what’s most interesting in this post’s contents.</p>
+                </div>
+            </div>
+            <!--Form-->
+            <form class="form " autocomplete="off" method="GET">
+                <!--Table for Course Details-->
+                <div>
+                    <table class=" table-striped container table table-sm col-12 table-bordered mt-5">
+                        <tbody id="detailsTable">
+                        </tbody>
+                    </table>
+                </div>
+
+                
+                <div class="col-12 text-center">
+                        <a href="" id="registerButton" type="button" class="btn btn-primary">Register </a>
+                </div> 
+
+                <div class=" p-4 p-md-5 text-black ">
+                    <div class="col-md-12 px-0">
+                        <h1 class="font-italic text-center "> Students Registered</h1>
                     </div>
                 </div>
-                      <!--Form-->
-            <form class="form " autocomplete="off" method="GET">
-                      <!--Table-->
-                      <div>
-                        <table id="productTable" class=" table-striped container table table-sm col-12 table-bordered mt-5">
-                        <tbody id="detailsTable"> 
+                 <!--Table for Students-->
+                <div>
+                    <table id="studentsTable">
+                        class=" table-striped container table table-sm col-12 table-bordered mt-5">
+                        <tbody id="studentsTable">
                         </tbody>
-                      </table>
-                    </div>
-
-                    <div class="col-12 text-center">
-                        <a href="register.html"  class="btn btn-primary btn-lg active font-weight-bold mt-3" role="button" aria-pressed="true" >Register</a>
-                    </div>    
+                    </table>
+                </div>
             </form>
         </div>
     </main>
@@ -60,15 +66,13 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"></script>
-      <script src="scripts/details.js"></script>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="scripts/details.js"></script>
+</body>
+
 </html>

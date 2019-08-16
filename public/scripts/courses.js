@@ -29,15 +29,20 @@ $(function() {
       coursesObjs = data;
       //Table header
       let coursesHeader = $(
-        "<tr><th>Title</th><th>Start Date</th><th>&nbsp;</th><tr>");
+        "<tr><th>Title</th><th>Start Date</th><th>&nbsp;</th><tr>"
+      );
       $("#coursesHeader").append(coursesHeader);
       // End of table header
 
       for (let i = 0; i < coursesObjs.length; i++) {
         //Table Body
-        let str ="<tr><td>" +coursesObjs[i].Title +"</td><td>" +coursesObjs[i].StartDate +"</td><td>" +
-          "<a href=details.html?CourseId=" +coursesObjs[i].CourseId +">Details<a>" +"</td></tr>";
-        $("#coursesTable").append(str);
+        let str =
+          "<tr><td>" +
+          coursesObjs[i].Title +
+          "</td><td>" +
+          coursesObjs[i].StartDate +
+          "</td><td>" +
+          "<a href=details.html?CourseId=" +coursesObjs[i].CourseId +">Details<a>" +"</td></tr>";$("#coursesTable").append(str);
         //End of body table
       }
     }); // end of get JSON
