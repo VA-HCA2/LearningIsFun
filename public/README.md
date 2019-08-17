@@ -1,1 +1,3 @@
-This  website helps the user explore and register for continuing education courses at a community center. 
+### Learning is Fun
+
+- This  website helps the user explore and register for continuing education courses at a community center.

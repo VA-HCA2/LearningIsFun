@@ -1,13 +1,12 @@
-h1{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
-    
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
 }
 
-.formBorder, .page{
-    padding:2%;
-    margin-top: 100px;
-    border-radius: 25px;
+.formBorder, .page {
+  padding: 2%;
+  margin-top: 100px;
+  border-radius: 25px;
   border: 3px solid rgb(238, 191, 103);
   background-color: white
 }
@@ -16,4 +15,21 @@ h1{
   background-image: url("../images/logo.jpg");
   background-size: cover;
   height: 400px;
+}
+
+.coursesImage {
+  background-image: url("../images/coursesbanner.jpg");
+  background-size: cover;
+  height: 400px;
+}
+
+.detailsImage {
+  background-image: url("../images/detailsbanner.jpg");
+  background-size: cover;
+  height: 400px;
+}
+
+#error {
+  display: none;
+  font-size: 18px;
 }
