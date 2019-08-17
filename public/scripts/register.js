@@ -25,7 +25,7 @@ $(function () {
     }
     else {
       // If data is entered post in the students table  
-      $.post("/api/register", $("#newStudent").serialize(), function (data) {
+      $.get("/api/register", $("#newStudent").serialize(), function (data) {
         window.location.href = "details.html?CourseId=" + courseValue;
       });
       return false;
