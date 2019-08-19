@@ -20,13 +20,13 @@ h1 {
 .coursesImage {
   background-image: url("../images/coursesbanner.jpg");
   background-size: cover;
-  height: 400px;
+  height: 242px;
 }
 
 .detailsImage {
   background-image: url("../images/detailsbanner.jpg");
   background-size: cover;
-  height: 400px;
+  height: 242px;
 }
 
 #error {

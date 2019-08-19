@@ -33,8 +33,37 @@ $(function () {
 
       //Table header starts
       let coursesHeader = $(
+        "<tr><th>Title</th><th>Start Date</th><th>&nbsp;</th><th>&nbsp;</th></tr>");
+
+      $("#coursesHeader").append(coursesHeader);
+      // End of table header
+
+      for (let i = 0; i < coursesObjs.length; i++) {
+
+        //Table Body
+        let str = "<tr><td>" + coursesObjs[i].Title + "</td><td>" + coursesObjs[i].StartDate + "</td><td>" +
+          "<a href=details.html?CourseId=" + coursesObjs[i].CourseId + ">Details<a>" + "</td><td>"
+          +"<a href=details.html?CourseId="+ coursesObjs[i].CourseId + ">Edit<a></td></tr>";
+
+        $("#coursesTable").append(str);
+
+      }//End of body table
+    }); // end of get JSON
+  }); //End of my onchange function
+
+  $("#showAll").on("click", function () {
+    // Clear my table header and table body when the student selects another course. 
+    $("#coursesTable").empty();
+    $("#coursesHeader").empty();
+    $.getJSON("/api/courses", function (
+      data
+    ) {
+      coursesObjs = data;
+
+      //Table header starts
+      let coursesHeader = $(
         "<tr><th>Title</th><th>Start Date</th><th>&nbsp;</th></tr>");
-        
+
       $("#coursesHeader").append(coursesHeader);
       // End of table header
 
@@ -43,10 +72,12 @@ $(function () {
         //Table Body
         let str = "<tr><td>" + coursesObjs[i].Title + "</td><td>" + coursesObjs[i].StartDate + "</td><td>" +
           "<a href=details.html?CourseId=" + coursesObjs[i].CourseId + ">Details<a>" + "</td></tr>";
-      
-          $("#coursesTable").append(str);
-        
+
+        $("#coursesTable").append(str);
+
       }//End of body table
     }); // end of get JSON
-  }); //End of my onchange function
+
+  });
+
 }); // end of ready fuction
