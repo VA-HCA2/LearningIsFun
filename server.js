@@ -150,8 +150,8 @@ app.get('/api/courses/bycategory/:id', function (req, res) {
 
 /* REGISTERS A STUDENT FOR THE COURSE */
 
-app.get('/api/register',function (req, res) {
-    console.log("Got a get request to register student");
+app.post('/api/register', urlencodedParser, function (req, res) {
+    console.log("Got a POST request to register student");
     console.log("BODY -------->" + JSON.stringify(req.body));
 
     let selectedCourseId = req.body.courseid;
