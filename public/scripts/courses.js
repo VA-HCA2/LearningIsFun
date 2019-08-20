@@ -43,7 +43,7 @@ $(function () {
         //Table Body
         let str = "<tr><td>" + coursesObjs[i].Title + "</td><td>" + coursesObjs[i].StartDate + "</td><td>" +
           "<a href=details.html?CourseId=" + coursesObjs[i].CourseId + ">Details<a>" + "</td><td>"
-          +"<a href=details.html?CourseId="+ coursesObjs[i].CourseId + ">Edit<a></td></tr>";
+          +"<a href=edit.html?CourseId="+ coursesObjs[i].CourseId + ">Edit<a></td></tr>";
 
         $("#coursesTable").append(str);
 
