@@ -36,7 +36,7 @@ $(function () {
     // Table for Students
 
     //Table header
-    let studentsHeader = $("<tr><th>Student Name</th><th>Email Address</th></tr>");
+    let studentsHeader = $("<tr><th>Student Name</th><th>Email Address</th><th>Action</th></tr>");
     $("#studentsHeader").append(studentsHeader);
     // End of table header
 
@@ -44,9 +44,12 @@ $(function () {
     for (let i = 0; i < obj.Students.length; i++) 
     {
       // Table body for students
-      let students ="<tr><td>" +obj.Students[i].StudentName +"</td><td>" +obj.Students[i].Email +"</td></tr>";
+      let uri="deletestudent.html?CourseId="+CourseId+"&studentName="+obj.Students[i].StudentName+"&email="+obj.Students[i].Email;
+      uri= encodeURI(uri);
+      let students ="<tr><td>" +obj.Students[i].StudentName +"</td><td>" +obj.Students[i].Email +"</td><td>"+"<a href='"+uri+"'>Unregister<a>"+"</td></tr>";
       $("#studentsTable").append(students);
     }
+   
 
     // Hide if there are not registered students
     if (obj.Students.length == "")
