@@ -8,14 +8,18 @@ $(function () {
 
   // Get information with the course Id of the selected course.
   $.getJSON("api/courses/" + CourseId, function (data) {
-    let obj;
-    obj = data;
+    let course; // like obj
+    course = data;
 
- // Get the value of the course ID 
+ // Get the value for each field
   $("#courseid").val(CourseId);
-  $("#category").val(category);
+  $("#category").val(course.Category);
+  $("#location").val(course.Location);
+  $("#startdate").val(course.StartDate);
+  $("#enddate").val(course.EndDate);
+  $("#meets").val(course.Meets);
+  $("#fee").val(course.Fee);
 
-    
 
   // ***ADD STUDENTS HERE ***
   }); // end of get JSON
@@ -23,14 +27,14 @@ $(function () {
   $("#editBttn").on("click", function () 
   {
         $.ajax({
-        url: '/api/courses', 
-    
-        data: $("#courseInfo").serialize(),
-        method: 'PUT', // method is any HTTP method
-        success: function() {
-        alert("Working");
-        document.location.href = "courses.html?" + "instr=" + $.urlParam('instr');
-        }
+          url: '/api/courses', 
+      
+          data: $("#courseInfo").serialize(),
+          method: 'PUT', // method is any HTTP method
+          success: function() {
+            alert("Working");
+            document.location.href = "courses.html?" + "instr=" + $.urlParam('instr');
+          }
         });
 
   });
