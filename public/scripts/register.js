@@ -5,7 +5,7 @@ $(function () {
 
   let urlParams = new URLSearchParams(location.search);
   let CourseId = urlParams.get("CourseId");
-  let pattern= /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
+  let pattern = /^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/
 
   // Get the value of the course ID 
   $("#courseId").val(CourseId);
@@ -17,10 +17,10 @@ $(function () {
     let emailAddress = $("#email").val();
     // Validation if no data is entered 
     $("#error").show();
-    if (nameOfStudent.trim() =="") {
+    if (nameOfStudent.trim() == "") {
       $("#error").html("Please fill out Name field");
       return false;
-    } else if ( !pattern.test(emailAddress)) {
+    } else if (!pattern.test(emailAddress)) {
       $("#error").html("Please fill out Email-Address field");
       return false;
     }
@@ -28,7 +28,10 @@ $(function () {
       // If data is entered post in the students table  
       $.post("/api/register", $("#newStudent").serialize(), function (data) {
         window.location.href = "details.html?CourseId=" + courseValue;
-      });
+      })
+        .fail(function () {
+          alert("error");
+        });
       return false;
     }
 
